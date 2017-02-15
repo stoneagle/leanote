@@ -7,8 +7,8 @@ services:
     volumes: 
       - ../../mongodb:/data/db
       - ../leanote/mongodb_backup:/var/www/mongo
-    expose:
-      - "27017"
+    #expose:
+    #  - "27017"
     ports:
       - "${DEV_PORT_MONGO}:27017"
     networks:

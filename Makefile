@@ -7,6 +7,6 @@ GROUP := $(shell id -g)
 # VERSION := $(shell git describe --always --tags | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+")
 
 run-web:
-	cd hack && sudo docker-compose -p "leanote-$(USER)" up
+	cd docker && sudo docker-compose -p "leanote-$(USER)" up
 
 

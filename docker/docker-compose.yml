@@ -5,9 +5,9 @@ services:
     container_name: mongo-leanote-${DEV_USER}
     command: mongod --auth
     volumes: 
-      - ../../mongodb:/data/db
+      - /home/wuzhongyang/database/mongodb:/data/db
       - ../leanote/mongodb_backup:/var/www/mongo
-    #expose:
+    # expose:
     #  - "27017"
     ports:
       - "${DEV_PORT_MONGO}:27017"

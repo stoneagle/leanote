@@ -7,10 +7,10 @@ GROUP := $(shell id -g)
 # VERSION := $(shell git describe --always --tags | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+")
 
 run-web:
-	cd docker && sudo docker-compose -p "leanote-$(USER)" up
+	cd docker && docker-compose -p "leanote-$(USER)" up -d
 
 stop-web:
-	cd docker && sudo docker-compose -p "leanote-$(USER)" stop 
+	cd docker && docker-compose -p "leanote-$(USER)" stop 
 
 rm-web:
-	cd docker && sudo docker-compose -p "leanote-$(USER)" rm 
+	cd docker && docker-compose -p "leanote-$(USER)" rm 

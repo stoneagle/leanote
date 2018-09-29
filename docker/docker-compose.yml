@@ -16,7 +16,7 @@ services:
   go:
     environment:
       - DEBUG=true
-    image: docker.io/mongo:3.0 
+    image: stoneagle/develop:leanote
     container_name: go-leanote-${DEV_USER}
     command: bash /var/www/html/www/bin/run.sh
     volumes:
@@ -29,9 +29,7 @@ services:
       - "${DEV_PORT}:9000"
     networks:
       - default
-
 networks:
   default:
     external:
       name: ${DEV_USER}
-

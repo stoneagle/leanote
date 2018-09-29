@@ -14,3 +14,4 @@ db.createUser({
 ```
 mongorestore --username user --password 'pass' --db db ./backup-dir
 ```
+* 为了支持pdf下载，需要额外配置whhtmltopdf插件以及相关字体
